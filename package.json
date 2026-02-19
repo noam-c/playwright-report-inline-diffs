@@ -1,0 +1,28 @@
+{
+  "name": "playwright-report-inline-diffs",
+  "version": "0.1.0",
+  "description": "Playwright reporter that injects diffs into the main page of the HTML report",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "assets"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "tsc"
+  },
+  "peerDependencies": {
+    "@playwright/test": ">=1.20"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.16"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.50.0",
+    "@types/adm-zip": "^0.5.7",
+    "typescript": "^5.7.0"
+  },
+  "license": "MIT"
+}
