@@ -64,10 +64,11 @@ class InlineSnapshotReporter implements Reporter {
     const html = fs.readFileSync(indexPath, 'utf-8');
 
     // The Playwright HTML reporter embeds report data as a base-64 data-URI
-    // inside a <script> tag. We extract that, decode the zip, and pull out
-    // report.json to find which tests have snapshot diffs.
+    // inside an element with id="playwrightReportBase64" — a <script> tag in
+    // older versions and a <template> tag from Playwright ≥1.59. Match by ID
+    // to stay compatible with both.
     const scriptMatch = html.match(
-      /<script id="playwrightReportBase64"[^>]*>([\s\S]*?)<\/script>/,
+      /<[a-z]+ id="playwrightReportBase64"[^>]*>([\s\S]*?)<\/[a-z]+>/,
     );
     if (!scriptMatch) return;
 
