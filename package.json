@@ -17,12 +17,12 @@
     "@playwright/test": ">=1.20"
   },
   "dependencies": {
-    "adm-zip": "^0.5.16"
+    "adm-zip": "^0.6.0"
   },
   "devDependencies": {
-    "@playwright/test": "^1.50.0",
-    "@types/adm-zip": "^0.5.7",
-    "typescript": "^5.7.0"
+    "@playwright/test": "^1.63.0",
+    "@types/adm-zip": "^0.5.8",
+    "typescript": "^5.9.3"
   },
   "license": "MIT"
 }
